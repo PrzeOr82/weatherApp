@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.bg {
+    background-color: rgb(103, 172, 236);
+    height: 100vh
+}
+
+.container {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.weather-icon {
+    padding-top: 100px;
+}
+
+.city {
+    font-size: 3rem;
+}
+
+.temp_min_max {
+    display: flex;
+    justify-content: center;
+}
+
+.temp_actual {
+    font-size: 2rem;
+    padding: 5px;
+}
+
+.fa-long-arrow-alt-down {
+    color: red;
+}
+
+.fa-long-arrow-alt-up {
+    color: green;
+}
