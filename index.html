@@ -12,7 +12,13 @@
 
 <body>
     <div class="bg">
-        <input type="text" placeholder=" city name..."><button id="btn">Search</button>
+        <div id="userInput">
+            <input type="text" placeholder=" city name..."><button id="btn">Search</button>
+        </div>
+
+        <h1>Weather App</h1>
+        <p>simple app that shows actual weather in city you select</p>
+
         <div class="container">
             <div class="weather-icon">
                 <img src="https://i.gifer.com/origin/55/557cf365dc92953274c6c331461ee607_w200.gif" alt="">
@@ -30,13 +36,16 @@
                         <span class="temp_max"></span>
                     </div>
                 </div>
-                <div class="humidity_cont">
-                    <i class="fas fa-umbrella"></i>
-                    <span class="humidity"></span>
-                </div>
-                <div class="wind_cont">
-                    <i class="fas fa-wind"></i>
-                    <span class="wind">4.1</span>
+                <br>
+                <div class="hum_wind">
+                    <div class="humidity_cont">
+                        <i class="fas fa-umbrella"></i>
+                        <span class="humidity"></span>
+                    </div>
+                    <div class="wind_cont">
+                        <i class="fas fa-wind"></i>
+                        <span class="wind"></span>
+                    </div>
                 </div>
             </div>
 

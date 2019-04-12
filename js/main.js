@@ -32,4 +32,7 @@ btn.addEventListener('click', function() {
     }
     http.open('GET', url, true);
     http.send();
+
+    document.querySelector('.container').style.display = "block";
+    document.querySelector('p').style.display = "none";
 })

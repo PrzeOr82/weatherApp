@@ -10,23 +10,36 @@
     height: 100vh
 }
 
-.container {
-    margin: auto;
-    width: 50%;
+h1 {
     text-align: center;
+    font-size: 4rem;
+    padding-bottom: 30px;
 }
 
-.weather-icon {
-    padding-top: 100px;
+p {
+    text-align: center;
+    display: block;
+}
+
+.container {
+    margin: auto;
+    width: 20%;
+    min-width: 300px;
+    text-align: center;
+    box-shadow: 0 0 25px black;
+    border-radius: 20px;
+    padding: 30px 0;
+    display: none;
 }
 
 .city {
     font-size: 3rem;
 }
 
-.temp_min_max {
+.temp_min_max,
+.hum_wind {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .temp_actual {
@@ -40,4 +53,9 @@
 
 .fa-long-arrow-alt-up {
     color: green;
+}
+
+#userInput {
+    display: flex;
+    justify-content: flex-end;
 }
