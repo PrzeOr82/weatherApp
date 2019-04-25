@@ -1,6 +1,6 @@
 ## Simple Weather App [Work in progress] 🌩️
 
-It's my attempt to create weather app in vanilla JavaScript
+My attempt to create weather app in vanilla JavaScript
 
 Live app: https://przeor82.github.io/weatherApp/
 
