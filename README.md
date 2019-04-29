@@ -9,7 +9,7 @@ Live app: https://przeor82.github.io/weatherApp/
 - [x] selecting city
 - [x] fetching current weather data from https://openweathermap.org
 - [x] simple CSS (temporary)
-- [ ] dynamic background image (day/night)
+- [x] dynamic background image (day/night)
 - [ ] weather icon reflecting current weather conditions
 - [ ] 5 day / 3 hour forecast
 - [ ] charts
