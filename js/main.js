@@ -1,7 +1,7 @@
 const btn = document.querySelector('#btn');
 const bg = document.querySelector('#bg');
 const container = document.querySelector('#container');
-let date = new Date;
+let date = new Date("April 20, 22:30");
 
 const theme = {
     day: "/weatherApp/assets/img/day.png",
@@ -14,7 +14,8 @@ function bgChange() {
         bg.style.backgroundImage = `url(${theme.night})`;
         bg.style.color = "#fff";
         bg.style.backgroundColor = "#001652";
-
+        container.style.backgroundColor = "#001652";
+        container.style.boxShadow = "0 0 25px white";
     } else {
         bg.style.backgroundImage = `url(${theme.day})`;
     }
