@@ -6,7 +6,7 @@ Live app: https://przeor82.github.io/weatherApp/
 
 ## Todo:
 
-- [x] selecting city by user
+- [x] selecting city
 - [x] fetching current weather data from https://openweathermap.org
 - [x] simple CSS (temporary)
 - [ ] dynamic background image (day/night)
