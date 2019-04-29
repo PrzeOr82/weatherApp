@@ -10,8 +10,8 @@
     font-size: 20px;
 }
 
-.bg {
-    background: url(/weatherApp/assets/img/day.png);
+#bg {
+    /* background: url(/weatherApp/assets/img/day.png); */
     background-color: #5EC7C3;
     background-repeat: no-repeat;
     background-size: content;

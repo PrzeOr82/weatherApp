@@ -1,6 +1,26 @@
-let btn = document.querySelector('#btn');
+const btn = document.querySelector('#btn');
+const bg = document.querySelector('#bg');
+let date = new Date;
+
+const theme = {
+    day: "/weatherApp/assets/img/day.png",
+    night: "/weatherApp/assets/img/night.png"
+}
+
+function bgChange() {
+    if (date.getHours() > 19) {
+        bg.style.backgroundImage = `url(${theme.night})`;
+        bg.style.color = "#fff";
+        bg.style.backgroudColor = "#001652";
+    } else {
+        bg.style.backgroundImage = `url(${theme.day})`;
+    }
+}
+
+bgChange();
 
 btn.addEventListener('click', function() {
+    bgChange();
     let userInput = document.querySelector('input').value;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&APPID=4fbcc4f736c166226d8d0b11a6fc32b8&units=metric`;
 
