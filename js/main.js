@@ -1,7 +1,7 @@
 const btn = document.querySelector('#btn');
 const bg = document.querySelector('#bg');
 const container = document.querySelector('#container');
-let date = new Date("April 20, 22:30");
+let date = new Date;
 
 const theme = {
     day: "/weatherApp/assets/img/day.png",
