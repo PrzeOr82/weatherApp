@@ -1,5 +1,6 @@
 const btn = document.querySelector('#btn');
 const bg = document.querySelector('#bg');
+const container = document.querySelector('#container');
 let date = new Date;
 
 const theme = {
@@ -7,11 +8,13 @@ const theme = {
     night: "/weatherApp/assets/img/night.png"
 }
 
+// Setting background image according to time
 function bgChange() {
     if (date.getHours() > 19) {
         bg.style.backgroundImage = `url(${theme.night})`;
         bg.style.color = "#fff";
-        bg.style.backgroudColor = "#001652";
+        bg.style.backgroundColor = "#001652";
+
     } else {
         bg.style.backgroundImage = `url(${theme.day})`;
     }
@@ -28,7 +31,6 @@ btn.addEventListener('click', function() {
 
     http.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(JSON.parse(http.responseText));
             let resp = JSON.parse(http.responseText);
 
             // Object Destructuring
@@ -45,6 +47,6 @@ btn.addEventListener('click', function() {
     http.open('GET', url, true);
     http.send();
 
-    document.querySelector('.container').style.display = "block";
+    document.querySelector('#container').style.display = "block";
     document.querySelector('p').style.display = "none";
 })

@@ -11,7 +11,6 @@
 }
 
 #bg {
-    /* background: url(/weatherApp/assets/img/day.png); */
     background-color: #5EC7C3;
     background-repeat: no-repeat;
     background-size: content;
@@ -29,7 +28,7 @@ p {
     display: block;
 }
 
-.container {
+#container {
     margin: auto;
     width: 20%;
     min-width: 300px;
@@ -38,7 +37,6 @@ p {
     border-radius: 20px;
     padding: 30px 0;
     display: none;
-    background: rgba(255, 255, 255, 0.3);
 }
 
 .city {
