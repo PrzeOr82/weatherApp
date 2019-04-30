@@ -4,8 +4,28 @@ const container = document.querySelector('#container');
 let date = new Date;
 
 const theme = {
-    day: "/weatherApp/assets/img/day.png",
-    night: "/weatherApp/assets/img/night.png"
+    day: "assets/img/day.png",
+    night: "assets/img/night.png",
+    icons: {
+        '01d': "assets/img/sunnyDay.png",
+        '01n': "assets/img/sunnyNight.png",
+        '02d': "assets/img/fewCloudsDay.png",
+        '02n': "assets/img/fewCloudsNight.png",
+        '03d': "assets/img/fewCloudsDay.png",
+        '03n': "assets/img/fewCloudsNight.png",
+        '04d': "assets/img/scatteredClouds.png",
+        '04n': "assets/img/scatteredClouds.png",
+        '09d': "assets/img/rainDay.png",
+        '09n': "assets/img/rainNight.png",
+        '10d': "assets/img/rainDay.png",
+        '10n': "assets/img/rainNight.png",
+        '11d': "assets/img/thunderstorm.png",
+        '11n': "assets/img/thunderstorm.png",
+        '13d': "assets/img/snowDay.png",
+        '13n': "assets/img/snowNight.png",
+        '50d': "assets/img/mistDay.png",
+        '50n': "assets/img/mistNight.png",
+    }
 }
 
 // Setting background image according to time
@@ -33,7 +53,7 @@ btn.addEventListener('click', function() {
     http.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let resp = JSON.parse(http.responseText);
-
+            console.log(resp);
             // Object Destructuring
             let { main, clouds, sys, weather, wind } = resp;
 
@@ -43,6 +63,10 @@ btn.addEventListener('click', function() {
             document.querySelector('.temp_max').innerHTML = Math.floor(main.temp_max) + "°C";
             document.querySelector('.humidity').innerHTML = Math.floor(main.humidity) + "%";
             document.querySelector('.wind').innerHTML = wind.speed;
+            document.querySelector('#main').innerHTML = weather[0].main;
+            document.querySelector('#description').innerHTML = weather[0].description;
+            document.querySelector('#icon').src = theme.icons[weather[0].icon];
+
         }
     }
     http.open('GET', url, true);
