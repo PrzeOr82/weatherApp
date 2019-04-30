@@ -1,4 +1,5 @@
 const btn = document.querySelector('#btn');
+const btn5day = document.querySelector('#btn5day');
 const bg = document.querySelector('#bg');
 const container = document.querySelector('#container');
 let date = new Date;
@@ -45,7 +46,7 @@ bgChange();
 
 btn.addEventListener('click', function() {
     bgChange();
-    let userInput = document.querySelector('input').value;
+    let userInput = document.querySelector('#city').value;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${userInput}&APPID=4fbcc4f736c166226d8d0b11a6fc32b8&units=metric`;
 
     let http = new XMLHttpRequest();
@@ -53,7 +54,7 @@ btn.addEventListener('click', function() {
     http.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let resp = JSON.parse(http.responseText);
-            console.log(resp);
+            //console.log(resp);
             // Object Destructuring
             let { main, clouds, sys, weather, wind } = resp;
 
@@ -74,4 +75,22 @@ btn.addEventListener('click', function() {
 
     document.querySelector('#container').style.display = "block";
     document.querySelector('p').style.display = "none";
+})
+
+btn5day.addEventListener('click', function() {
+    bgChange();
+    let userInput = document.querySelector('#city5day').value;
+    let url = `https://api.openweathermap.org/data/2.5/forecast?q=${userInput}&APPID=4fbcc4f736c166226d8d0b11a6fc32b8&units=metric`;
+
+    let http = new XMLHttpRequest();
+
+    http.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let resp = JSON.parse(http.responseText);
+            console.log(resp);
+        }
+    }
+    http.open('GET', url, true);
+    http.send();
+
 })
