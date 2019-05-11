@@ -1,3 +1,4 @@
+// testowa zmiana na linuxie
 const btn = document.querySelector('#btn');
 const bg = document.querySelector('#bg');
 const container = document.querySelector('#container');
